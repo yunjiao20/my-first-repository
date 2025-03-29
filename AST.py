@@ -2,6 +2,7 @@
 '''
 基于Python3.12.4, 用于完成一些简单替换任务的脚本程序, 只用于不完整莫尔斯电码和不完整ASCLL码的替换
 因为是在Windows上编写的, 您可能需要利用vim转变换行符以在Linux上运行
+如存在任何疑问, 请查看文档 https://github.com/yunjiao20/my-first-repository
 '''
 
 morse_code = {
@@ -126,6 +127,7 @@ def start_page():
     print(r' |__|  |__|  |__|    |/  /__/    \__\  /________/      |__|    ')
     print(r'-----------------------welcome to the AST-----------------------')
     print(r'Python programe AST.py 0.01 ...... You can include "h" in input message to watch help message')
+    print('Please watch document https://github.com/yunjiao20/my-first-repository if you need')
     print('\n')
 
 def print_version_message():
@@ -142,7 +144,6 @@ def print_help_message():
     print('a    --cleartext to ASCLL 将明文转换为ASCLL码,输入 q 退出该模式(16进制)')
     print('A    --ASCLL to cleartext 将ASCLL码转换为明文,输入 q 退出该模式')
     print('q    --end programe 终止程序')
-    print('上键返回上次输入')
 
     print('\n')
 
