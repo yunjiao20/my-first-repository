@@ -5,3 +5,6 @@
 解析我自定义的MyCnLang句法，请查看[MyCnLang语法速查.txt](./MyCnLang语法速查.txt)查看MyCnLang语法
 <hr>
 此句法器编写环境为 Linux 6.18.12+kali-amd64 Python 3.13 ，不能保证其他环境下的使用效果
+<br>
+<br>
+文档仍在编写中
