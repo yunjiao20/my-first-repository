@@ -6,7 +6,8 @@
 <hr>
 此句法器编写环境为 Linux 6.18.12+kali-amd64 Python 3.13 ，不能保证其他环境下的使用效果
 <br>
-最新的句法器为 `mycnlang.py` ,在最新的句法器提交后，旧的句法器会更名，在后面添加旧句法器的日期，如 **mycnlang20260815.py**.<br>
+<br>
+最新的句法器为 `mycnlang.py` ,在最新的句法器提交后，旧的句法器会更名，在后面添加旧句法器的日期，如 *mycnlang20260815.py*.<br>
 请下载`mycnlang.py`
 <br>
 <br>
