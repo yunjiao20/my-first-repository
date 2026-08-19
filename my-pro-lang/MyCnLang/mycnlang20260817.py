@@ -628,7 +628,7 @@ def evaluate(expression: list, STACK = STACK):
 def repl():
     '''MyCnLang的 read-evaluate-print loop（读取-求值-输出 循环）'''
     print('''\
-MyCnLang  2026/8/15  (Python 3.13 in Linux)
+MyCnLang  2026/8/17  (Python 3.13 in Linux)
 
 MyCnLang repl( read-evaluate-print loop（读取-求值-输出 循环） )
 解释运行我自定义的MyCnLang语法，支持中文关键字和中文符号。编写于
