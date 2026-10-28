@@ -28,4 +28,9 @@
 
 - 2026/10/28 （文件`mycnlang20261028.py`）
   - 删去了一些不必要的`eval`和`exec`包裹，提高了每次调用函数的效率
-  - 
+  - ***添加了库文件夹 mycnlang_lib ，拓展了一些功能，放到脚本目录下 import 即可。具体请查看
+    [MyCnLang_Lib README](./mycnlang_lib)***。
+  - 增添了`Shell`关键字，封装了Python`os.popen().read()`，允许你执行系统命令并获取信息，然后你可以使用
+    mycnlang_lib中的`string.mcl`库处理信息
+  - 增添了内置函数`f`（拼接字符串，以免你使用太多`+`拼接）、`len`（获取字符串、列表、字典长度）、`slice`（列表
+    和字符串切片）
