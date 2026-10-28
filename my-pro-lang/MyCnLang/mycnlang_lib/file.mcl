@@ -1,0 +1,64 @@
+def file_read(file_name, encoding) (
+    '读取文件，返回文件内容。文件编码 encoding 是可选的，默认为 "utf-8"'
+    try (
+        if (have encoding) (
+            return PythonEval “open(MyCnLang['file_name'], mode='r', encoding=MyCnLang['encoding']).read()”
+        ) else (
+            return PythonEval “open(MyCnLang['file_name'], mode='r', encoding='utf-8').read()”
+        )
+    ) except FileNotFoundError (
+        raise 文件不存在 
+    )
+)
+
+文件读取 = file_read
+
+
+
+
+def file_readlines(file_name, encoding)(
+    '按行读取文件，返回一个包含文件每个行的列表。文件编码 encoding 是可选的，默认为 "utf-8"'
+    try (
+        if (have encoding) (
+            return PythonEval “open(MyCnLang['file_name'], mode='r', encoding=MyCnLang['encoding']).readlines()”
+        ) else (
+            return PythonEval “open(MyCnLang['file_name'], mode='r', encoding='utf-8').readlines()”
+        )
+    ) except FileNotFoundError (
+        raise 文件不存在
+    )
+)
+文件按行读取 = file_readlines
+
+
+
+def file_write(file_name, text)(
+    “
+    清空文件内容，写入字符串text
+    如果文件不存在，file_write 会创建文件并写入内容
+    file_write 使用 utf-8 编码
+
+    注意： 写入的信息不会自动换行
+    ”
+    try (
+        PythonExec “with open(MyCnLang['file_name'], mode='w', encoding='utf-8') as f:  f.write(MyCnLang['text'])”
+    ) except FileNotFoundError (
+        raise 文件不存在 
+    )
+)
+文件写入 = file_write
+
+def file_append(file_name, text)(
+    “
+    在文件末尾追加 utf-8 字符串 text 
+    如果文件不存在，file_append会创建文件并写入
+
+    追加的信息不会自动换行
+    ”
+    try (
+        PythonExec “with open(MyCnLang['file_name'], mode='a', encoding='utf-8') as f:  f.write(MyCnLang['text'])”
+    ) except FileNotFoundError (
+        raise 文件不存在
+    )
+)
+文件追加 = file_append

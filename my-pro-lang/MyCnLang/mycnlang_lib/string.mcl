@@ -1,0 +1,61 @@
+函数 输出n（）（
+    “
+    将你提供的所有参数打印到终端
+    这个函数与 输出/print 相比，不会在末尾换行
+    ”
+    PythonExec “print(STACK['s'], end='')” s 属于 @argv
+）
+
+printn = 输出n
+
+
+
+
+def split(s, split_sign) (
+    “
+    python str.split()
+    接受一到两个字符串参数，分割字符串返回一个列表
+    1. 如果只有一个参数s，将会以空格和换行分割字符串
+    2. 如果提供了第二个参数 split_sign，将会以 split_sign 分割字符串
+    如：
+        split('abc d ef     g')  =>  ['abc', 'd', 'ef', 'g']
+        split('2026-10-27', '-')  =>  ['2026', '10', '27']
+    ”
+    if not have split_sign (
+        # 没有提供 split_sign
+        split_sign = None
+    )
+
+    return PythonEval “MyCnLang['s'].split(MyCnLang['split_sign'])”
+)
+
+
+字符串分割 = split
+
+
+
+
+def s_replace(s, replace, to) (
+    “
+    python str.replace()
+    接受三个字符串参数s、replace、to，将字符串s中的子字符串replace替换为to
+    如：
+        s_replace('hello world', 'l', '7') => 'he77o, wor7d'
+        s_replace('123abc45abc6789abc', 'abc', '') => '123456789'
+    ”
+    return PythonEval “MyCnLang['s'].replace(MyCnLang['replace'], MyCnLang['to'])”
+)
+
+字符串替换 = s_replace
+
+
+
+def ord(char) (
+    return PythonEval “ord(MyCnLang['char'])”
+)
+码点 = ord
+
+def chr(num) (
+    return PythonEval “chr(MyCnLang['num'])”
+)
+译码 = chr
